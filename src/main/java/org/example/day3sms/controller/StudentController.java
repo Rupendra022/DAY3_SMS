@@ -1,0 +1,9 @@
+package org.example.day3sms.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class StudentController {
+
+
+}
