@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "student_sms")  // this dependency is for mongoDB
+@Document(collection = "SMS")  // this dependency is for mongoDB
 public class StudentModel {
 
     private String id ;
