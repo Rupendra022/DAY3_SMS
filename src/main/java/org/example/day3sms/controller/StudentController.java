@@ -2,9 +2,9 @@ package org.example.day3sms.controller;
 
 import org.example.day3sms.model.StudentModel;
 import org.example.day3sms.service.StudentService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class StudentController {
@@ -20,6 +20,26 @@ public class StudentController {
           public StudentModel addStudent(@RequestBody StudentModel student){
               return service.addStudent(student);
           }
+
+      @GetMapping("/students")
+          public List<StudentModel> getStudents(){
+              return service.getStudents();
+          }
+
+      @PutMapping("/update/{id}")
+      public StudentModel updateStudent(@PathVariable String id , @RequestBody StudentModel student){
+          return service.updateStudent(id,student);
+      }
+
+      @DeleteMapping("/delete/id")
+      public String deleteStudent(@PathVariable String id){
+          service.deleteStudent(id);
+          return "Student deleted Successfully";
+      }
+
+
+
+
       }
 
 
