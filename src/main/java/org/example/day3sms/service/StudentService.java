@@ -1,5 +1,6 @@
 package org.example.day3sms.service;
 
+import org.example.day3sms.controller.dto.StudentRequestDto;
 import org.example.day3sms.model.StudentModel;
 import org.example.day3sms.repository.StudentRepository;
 import org.springframework.stereotype.Service;
@@ -44,7 +45,19 @@ public class StudentService {
         repository.delete(existingStudent);
     }
 
+    public StudentRequestDto addStudent(StudentRequestDto dto){
+        StudentModel.setAge(dto.getAge());
+        StudentModel.setEmail(dto.getEmail());
+        StudentModel.setName(dto.getName());
 
+
+
+
+}
+
+// services k andr 2 object kyo bnaye jaa rhi h
+// 1. for user
+// 2 . for database
 }
 
 
